@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tailwind CSS Skeleton</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome if you need it
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  -->
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+
+    <style>
+        @import url("https://rsms.me/inter/inter.css");
+
+        html {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+                "Noto Color Emoji";
+        }
+
+        .gradient {
+            background-image: linear-gradient(-225deg, #27272b 0%, #00466f 100%);
+        }
+
+        button,
+        .gradient2 {
+            background-color: #f39f86;
+            background-image: linear-gradient(315deg, #f9bbbb 0%, rgb(232 65 42) 74%);
+        }
+
+        /* Custom code for the demo */
+    </style>
+</head>
+
+<body class="gradient leading-relaxed tracking-wide flex flex-col">
+    <!--Nav-->
+    <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-6">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-6">
+
+            <div class="pl-4 flex items-center">
+                <a class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                    <img class="object-center max-w-xs" src="img/F499.png" alt="F499 price tag logo">
+                </a>
+            </div>
+
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-700 border-gray-800 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                            href="#">link</a>
+                    </li>
+                </ul>
+                <button id="navAction"
+                    class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
+                    Action
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+        <div class="text-center px-3 lg:px-0">
+            <h1 class="my-4 text-2xl md:text-3xl lg:text-5xl font-black leading-tight text-gray-200">
+                Better racing through sim-dentistry.
+            </h1>
+            <p class="leading-normal text-gray-400 text-base md:text-xl lg:text-2xl mb-8">
+                The iRacing rating system can encourage antisocial behavior - divebombs, "punt to
+                pass", "it was netcode" collisions. Win or place at all costs. You, gentle racer, are rewarded for good
+                placement every race
+                - you finish higher in the order, your iRating goes up! At the same time, there are limited rewards for
+                safe racing and superior
+                racecraft.
+            </p>
+        </div>
+    </div>
+
+    <section class="bg-gray-100 border-b py-8">
+        <div class="container max-w-5xl mx-auto m-8">
+            <h2 class="w-fit my-4 text-xl md:text-2xl lg:text-3xl font-black leading-tight text-center text-gray-800">
+                Let's face it, your iRacing license class is not that important. 
+            </h2>
+            <div class="text-center">
+                <p class="mx-10 text-base md:text-lg lg:text-xl">
+                    Rather than sacrifice Safety Rating (SR) for iRating (IR), the innovation of F499 is to
+                    prioritize <strong>safety</strong> and <strong>good racing hygiene</strong>.</p>
+                <h2
+                    class="w-fit my-4 text-xl md:text-2xl lg:text-3xl font-black leading-tight text-center text-gray-800">
+                    <em>We want to be better racing drivers, not just
+                        drivers with
+                        large collections of fake internet points.</em>
+                </h2>
+                <p class="mx-10 text-base md:text-lg lg:text-xl">
+                    We chose SR as our driving metric. Our goal is 4.99 on the path to better racing! </p>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-white border-b py-8">
+        <div class="container mx-auto flex flex-wrap pt-4 pb-12">
+            <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-gray-800">
+                What Now?
+            </h2>
+            <div class="w-full mb-4">
+                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+            </div>
+
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                    <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                        <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6 uppercase">
+                            Season Challenge
+                        </p>
+                        <div class="w-full font-bold text-xl text-gray-800 px-6">
+                            What's better than a challenge?
+                        </div>
+                        <p class="text-gray-600 text-base px-6 mb-5">
+                            Every iRacing season, we will have a challenge. You will want to participate. It is a way to race with other like-minded sim-dentists and compete for glory.
+                        </p>
+                    </a>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex items-center justify-center">
+                        <a href="current-challenge.html">
+                            <button
+                                class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-black rounded-lg my-6 py-4 px-8 shadow-lg border-2 border-gray-700">
+                                F499 Challenge
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                    <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                        <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6 uppercase">
+                            Why am I here?
+                        </p>
+                        <div class="w-full font-bold text-xl text-gray-800 px-6">
+                            What they are on about?
+                        </div>
+                        <p class="text-gray-600 text-base px-6 mb-5">
+                            Read the manifesto, err, FAQ to understand the ethos of F499. Really, it's just a bunch of
+                            words. What could go wrong?
+                        </p>
+                    </a>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex items-center justify-center">
+                        <a href="faq.html">
+                            <button
+                                class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-black rounded-lg my-6 py-4 px-8 shadow-lg border-2 border-gray-700">
+                                FAQ
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+                <div class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow">
+                    <a href="#" class="flex flex-wrap no-underline hover:no-underline">
+                        <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6 uppercase">
+                            Hall of Fame
+                        </p>
+                        <div class="w-full font-bold text-xl text-gray-800 px-6">
+                            Who is the TOP DENTIST?
+                        </div>
+                        <p class=" text-gray-600 text-base px-6 mb-5">
+                            Sometimes you just have to tip your hat to the best of the best. The Hall of Fame is where you will find sim-dentists that have achieved the highest of honors.
+                        </p>
+                    </a>
+                </div>
+                <div class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6">
+                    <div class="flex items-center justify-center">
+                        <a href="hall-of-fame">
+                            <button
+                                class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-black rounded-lg my-6 py-4 px-8 shadow-lg border-2 border-gray-700">
+                                Hall of Fame
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gradient w-full mx-auto text-center pt-6 pb-12">
+        <h2 class="w-full my-2 text-5xl font-black leading-tight text-center text-white">
+            Call to Action
+        </h2>
+        <div class="w-full mb-4">
+            <div class="h-1 mx-auto bg-white w-1/6 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+
+        <h3 class="my-4 text-3xl font-extrabold">
+            Main Hero Message to sell yourself!
+        </h3>
+
+        <button
+            class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded my-6 py-4 px-8 shadow-lg">
+            Action!
+        </button>
+    </section>
+
+    <!--Footer-->
+    <footer class="bg-white ">
+        <div class="container mx-auto mt-8 px-8">
+            <div class="w-full flex flex-col md:flex-row py-6">
+                <div class="flex-1 mb-6">
+                    <a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+                        <img src="">
+                        <path d="M13 8V0L8.11 5.87 3 12h4v8L17 8h-4z" />
+                        </svg>
+                        Bolt App
+                    </a>
+                </div>
+
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">Links</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">FAQ</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Help</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">Legal</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Terms</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">Social</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Facebook</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Linkedin</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Twitter</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">
+                        Company
+                    </p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Official
+                                Blog</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">About
+                                Us</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /*Toggle dropdown list*/
+        /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+        var navMenuDiv = document.getElementById("nav-content");
+        var navMenu = document.getElementById("nav-toggle");
+
+        document.onclick = check;
+        function check(e) {
+            var target = (e && e.target) || (event && event.srcElement);
+
+            //Nav Menu
+            if (!checkParent(target, navMenuDiv)) {
+                // click NOT on the menu
+                if (checkParent(target, navMenu)) {
+                    // click on the link
+                    if (navMenuDiv.classList.contains("hidden")) {
+                        navMenuDiv.classList.remove("hidden");
+                    } else {
+                        navMenuDiv.classList.add("hidden");
+                    }
+                } else {
+                    // click both outside link and outside menu, hide menu
+                    navMenuDiv.classList.add("hidden");
+                }
+            }
+        }
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+                if (t == elm) {
+                    return true;
+                }
+                t = t.parentNode;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
